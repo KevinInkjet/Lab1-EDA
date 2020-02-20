@@ -231,6 +231,14 @@ int main()
 	//SUMA BINARIA
 	for(i=7; i>=0; i--)
 	{
+		if(binx[i] == 0 && biny[i] == 0 && acarreo[i] == 0)
+		{
+			resultado[i] = 0;
+		}
+		if(binx[i] == 0 && biny[i] == 0 && acarreo[i] == 1)
+		{
+			resultado[i] = 1;
+		}
 		if(binx[i] == 1 && biny[i] == 1 && acarreo[i] == 0)
 		{
 			acarreo[i-1] = 1;
