@@ -245,46 +245,47 @@ int main()
 	//SUMA BINARIA
 	for(i=7; i>=0; i--)
 	{
-		if(binx[i] == 0 && biny[i] == 0 && acarreo[i] == 0)
+		if(cadenax[i] == 0 && cadenay[i] == 0 && acarreo[i] == 0)
 		{
 			resultado[i] = 0;
 		}
-		if(binx[i] == 0 && biny[i] == 0 && acarreo[i] == 1)
+		if(cadenax[i] == 0 && cadenay[i] == 0 && acarreo[i] == 1)
 		{
 			resultado[i] = 1;
 		}
-		if(binx[i] == 1 && biny[i] == 1 && acarreo[i] == 0)
+		if(cadenax[i] == 1 && cadenay[i] == 1 && acarreo[i] == 0)
 		{
 			acarreo[i-1] = 1;
 			resultado[i] = 0;
 		}
-		if(binx[i] == 1 && biny[i] == 1 && acarreo[i] == 1)
+		if(cadenax[i] == 1 && cadenay[i] == 1 && acarreo[i] == 1)
 		{
 			acarreo[i-1] = 1;
 			resultado[i] = 1;
 		}
-		if(binx[i] == 1 && biny[i] == 0 && acarreo[i] == 0)
+		if(cadenax[i] == 1 && cadenay[i] == 0 && acarreo[i] == 0)
 		{
 			resultado[i] = 1;
 		}
-		if(binx[i] == 1 && biny[i] == 0 && acarreo[i] == 1)
+		if(cadenax[i] == 1 && cadenay[i] == 0 && acarreo[i] == 1)
 		{
 			resultado[i] = 0;
 			acarreo[i-1] = 1;
 		}
-		if(binx[i] == 0 && biny[i] == 1 && acarreo[i] == 0)
+		if(cadenax[i] == 0 && cadenay[i] == 1 && acarreo[i] == 0)
 		{
 			resultado[i] = 0;
 		}
-		if(binx[i] == 0 && biny[i] == 1 && acarreo[i] == 1)
+		if(cadenax[i] == 0 && cadenay[i] == 1 && acarreo[i] == 1)
 		{
 			resultado[i] = 0;
 			acarreo[i-1] = 1;
 		}
 	}
 	
+	
 	cout << endl;
-	cout << "Resultado de suma en binario: ";
+	cout << "Resultado de suma del complemento de x con el de y: ";
 	for(i=0; i<8; i++)
 	{
 		cout << resultado[i];
