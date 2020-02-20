@@ -9,6 +9,7 @@
 //- Cadenas binarias que representen x e y en formato Complemento a 2 de 8 bits.
 //- Resultado de la suma binaria entre x e y tanto en formato binario Complemento a 2 de 8 bits como en decimal. Las operaciones de la suma deben realizarse manipulando directamente los valores en su versión binaria y con operadores binarios/lógicos.
 //- En caso de que la suma se desborde deberán reportan el error. La validación del desbordamiento también deberá realizarse utilizando directamente los valores en su versión binaria y con operadores binarios/lógicos.
+//
 
 #include <iostream>
 #include <conio.h>
