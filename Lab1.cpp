@@ -15,6 +15,7 @@
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 using namespace std;
 
@@ -274,7 +275,7 @@ int main()
 		}
 		if(cadenax[i] == 0 && cadenay[i] == 1 && acarreo[i] == 0)
 		{
-			resultado[i] = 0;
+			resultado[i] = 1;
 		}
 		if(cadenax[i] == 0 && cadenay[i] == 1 && acarreo[i] == 1)
 		{
@@ -291,6 +292,10 @@ int main()
 		cout << resultado[i];
 	}
 	
+	//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2
+	res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
+	
+	/*
 	//CONVERTIR EL RESULTADO DE LA SUMA EN COMPLEMENTO A 2
 	for(i=7; i>=0; i--)
 		{
@@ -307,17 +312,16 @@ int main()
 				reversion = true;
 			}
 		}
-	reversion = false;
+	 reversion = false;
+	/*
+	res = 2^(8)-res;
+	if()
+	*/
+	//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2 2.0 borrar si no sirve
 	
-	cout << endl;
-	cout << "Resultado de suma en complemento a 2: ";
-	for(i=0; i<8; i++)
-	{
-		cout << resultado[i];
-	}
+	res = pow(2,8) - sqrt(res*res);
 	
-	//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2
-	res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
+	//res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
 	
 	cout << endl;
 	cout << "Resultado de la suma en decimal: " << res << endl;
