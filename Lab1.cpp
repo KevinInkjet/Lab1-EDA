@@ -22,7 +22,7 @@ using namespace std;
 int main()
 {
 	int x, y, centenas, decenas, unidades, unidadesy, decenasy, centenasy, cadenax[8], i, cadenay[8], acarreo[8], resultado[8], res, binx[8], biny[8];
-	bool reversion = false, negativox = false, negativoy = false;
+	bool reversion = false, negativox = false, negativoy = false, desborde = false;
 	
 	do
 	{
@@ -284,46 +284,70 @@ int main()
 		}
 	}
 	
-	
-	cout << endl;
-	cout << "Resultado de suma del complemento de x con el de y: ";
-	for(i=0; i<8; i++)
+	//VER SI DESBORDA(BORRAR SI NO FUNCIONA)
+	if(cadenax[0] == 0 && cadenay[0] == 0 && resultado[0] == 1)
 	{
-		cout << resultado[i];
+		cout << endl;
+		cout << "Cuidado, hubo un desborde en la suma" << endl;
+		desborde = true;
 	}
+	if(cadenax[0] == 1 && cadenay[0] == 1 && resultado[0] == 0)
+	{
+		cout << endl;
+		cout << "Cuidado, hubo un desborde en la suma" << endl;
+		desborde = true;
+	}
+	//VER SI DESBORDA ^
 	
-	//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2
-	res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
-	
-	/*
-	//CONVERTIR EL RESULTADO DE LA SUMA EN COMPLEMENTO A 2
-	for(i=7; i>=0; i--)
+	if(desborde == false)
+	{
+		cout << endl;
+		cout << "Resultado de suma del complemento de x con el de y: ";
+		for(i=0; i<8; i++)
 		{
-			if(resultado[i] == 1 && reversion == true)
-			{
-				resultado[i] = 0;
-			}
-			else if(resultado[i] == 0 && reversion == true)
-			{
-				resultado[i] = 1;
-			}
-			if(resultado[i] == 1 && reversion == false)
-			{
-				reversion = true;
-			}
+			cout << resultado[i];
 		}
-	 reversion = false;
-	/*
-	res = 2^(8)-res;
-	if()
-	*/
-	//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2 2.0 borrar si no sirve
-	
-	res = pow(2,8) - sqrt(res*res);
-	
-	//res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
-	
-	cout << endl;
-	cout << "Resultado de la suma en decimal: " << res << endl;
-	
+		
+		//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2
+		res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
+		
+		if(resultado[0] == 0)
+		{
+			cout << endl;
+			cout << "Resultado de la suma en decimal: " << res << endl;
+		}
+		else
+		{
+		/*
+		//CONVERTIR EL RESULTADO DE LA SUMA EN COMPLEMENTO A 2
+		for(i=7; i>=0; i--)
+			{
+				if(resultado[i] == 1 && reversion == true)
+				{
+					resultado[i] = 0;
+				}
+				else if(resultado[i] == 0 && reversion == true)
+				{
+					resultado[i] = 1;
+				}
+				if(resultado[i] == 1 && reversion == false)
+				{
+					reversion = true;
+				}
+			}
+		 reversion = false;
+		/*
+		res = 2^(8)-res;
+		if()
+		*/
+		//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2 2.0 borrar si no sirve
+		
+		res = pow(2,8) - sqrt(res*res);
+		
+		//res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
+		
+		cout << endl;
+		cout << "Resultado de la suma en decimal: " << res << endl;
+		}	
+	}
 }
