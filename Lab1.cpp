@@ -9,7 +9,6 @@
 //- Cadenas binarias que representen x e y en formato Complemento a 2 de 8 bits.
 //- Resultado de la suma binaria entre x e y tanto en formato binario Complemento a 2 de 8 bits como en decimal. Las operaciones de la suma deben realizarse manipulando directamente los valores en su versión binaria y con operadores binarios/lógicos.
 //- En caso de que la suma se desborde deberán reportan el error. La validación del desbordamiento también deberá realizarse utilizando directamente los valores en su versión binaria y con operadores binarios/lógicos.
-//
 
 #include <iostream>
 #include <conio.h>
@@ -122,7 +121,6 @@ int main()
 	{
 		binx[i] = cadenax[i];
 	}
-	
 	
 	//CONVIERTE Y A BINARIO Y LO GUARDA EN CADENAY
 	for(i=0; i<8; i++)
@@ -302,13 +300,12 @@ int main()
 	if(desborde == false)
 	{
 		cout << endl;
-		cout << "Resultado de suma del complemento de x con el de y: ";
+		cout << "Resultado de suma del complemento a 2 de x con el complemento a 2 de y: ";
 		for(i=0; i<8; i++)
 		{
 			cout << resultado[i];
 		}
 		
-		//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2
 		res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
 		
 		if(resultado[0] == 0)
@@ -318,36 +315,10 @@ int main()
 		}
 		else
 		{
-		/*
-		//CONVERTIR EL RESULTADO DE LA SUMA EN COMPLEMENTO A 2
-		for(i=7; i>=0; i--)
-			{
-				if(resultado[i] == 1 && reversion == true)
-				{
-					resultado[i] = 0;
-				}
-				else if(resultado[i] == 0 && reversion == true)
-				{
-					resultado[i] = 1;
-				}
-				if(resultado[i] == 1 && reversion == false)
-				{
-					reversion = true;
-				}
-			}
-		 reversion = false;
-		/*
-		res = 2^(8)-res;
-		if()
-		*/
-		//CONVERTIR A DECIMAL EL RESULTADO DE LA SUMA BINARIA COMPLEMENTO A 2 2.0 borrar si no sirve
 		
-		res = pow(2,8) - sqrt(res*res);
-		
-		//res = resultado[7] + 2*resultado[6] + 4*resultado[5] + 8*resultado[4] + 16*resultado[3] + 32*resultado[2] + 64*resultado[1] + 128*resultado[0];
-		
-		cout << endl;
-		cout << "Resultado de la suma en decimal: " << res << endl;
+			res = pow(2,8) - sqrt(res*res);	
+			cout << endl;
+			cout << "Resultado de la suma en decimal: " << res << endl;
 		}	
 	}
 }
