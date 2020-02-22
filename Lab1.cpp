@@ -1,6 +1,7 @@
 //Laboratorio 1
 //Kevin Samuel Cárdenas Muñoz
 //Compilador: Dev-C++
+//Lenguaje: C++
 
 //Entrada:
 //- Dos números enteros x,y en el rango [-128,127]
