@@ -111,11 +111,13 @@ int main()
 		cadenax[7]=1;
 	}
 	
+	/*
 	cout << "X en Binario: ";
 	for(i=0; i<8; i++)
 	{
 		cout << cadenax[i]; //VALIDACIÓN DE QUE X ESTÁ EN BINARIO
 	}
+	*/
 	
 	//Guardar el valor binario en binx para posteriormente utilizarlo en la suma
 	for(i=0; i<8; i++)
@@ -171,12 +173,14 @@ int main()
 		cadenay[7]=1;
 	}
 	
+	/*
 	cout << endl;
 	cout << "Y en Binario: ";
 	for(i=0; i<8; i++)
 	{
 		cout << cadenay[i]; //VALIDACIÓN DE QUE Y ESTÁ EN BINARIO
 	}
+	*/
 	
 	//Guardar el valor binario en biny para posteriormente utilizarlo en la suma
 	for(i=0; i<8; i++)
@@ -318,6 +322,10 @@ int main()
 		{
 		
 			res = pow(2,8) - sqrt(res*res);	
+			if(resultado[0] == 1)
+			{
+				res = res*-1;
+			}
 			cout << endl;
 			cout << "Resultado de la suma en decimal: " << res << endl;
 		}	
