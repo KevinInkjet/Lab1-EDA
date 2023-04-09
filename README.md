@@ -15,13 +15,13 @@ To run this program, you must have a C++ compiler installed on your system.
 1. Clone the  repository to your local machine using the command:
 
 ```bash
-git clone https://github.com/<username>/<repository-name>.git
+git clone https://github.com/KevinInkjet/binary-sum-calculator
 ```
 
 2. Compile the source code using the following command:
 
 ```bash
-g++ -o BinarySumCalculator BinarySumCalculator.cpp
+g++ -o BinarySumCalculator BSC.cpp
 ```
 
 3. Run the program using the command:
