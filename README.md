@@ -38,8 +38,8 @@ Suppose you enter the values x=25 and y=67. The program output will be as follow
 Enter the value of x in the range [-128,127]: 25
 Enter the value of y in the range [-128,127]: 67
 
-Binary two's complement format of x: 00011001
-Binary two's complement format of y: 01000011
-Result of the sum of the two's complement of x with the two's complement of y: 01011100
+Binary two's complement format of x: 11100111
+Binary two's complement format of y: 10111101
+Result of the sum of the two's complement of x with the two's complement of y: 10100100
 Result of the sum in decimal: 92
 ```
