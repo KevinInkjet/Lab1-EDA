@@ -185,7 +185,7 @@ int main()
 	}
 	
 	//VOLVER A X BINARIO COMPLEMENTO A 2
-	if(negativox == true)
+	if(negativox == false)
 	{
 		for(i=7; i>=0; i--)
 		{
@@ -214,7 +214,7 @@ int main()
 	
 	reversion = false;
 	//VOLVER A Y BINARIO COMPLEMENTO A 2
-	if(negativoy == true)
+	if(negativoy == false)
 	{
 		for(i=7; i>=0; i--)
 		{
@@ -320,7 +320,7 @@ int main()
 			res = pow(2,8) - sqrt(res*res);	
 			if(resultado[0] == 1)
 			{
-				res = res*-1;
+				res = res*1;
 			}
 			cout << endl;
 			cout << "Resultado de la suma en decimal: " << res << endl;
