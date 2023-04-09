@@ -1,15 +1,11 @@
-//Laboratorio 1
-//Kevin Samuel Cárdenas Muñoz
-//Compilador: Dev-C++
-//Lenguaje: C++
+//Input:
+//- Two integers x,y in the range [-128,127].
 
-//Entrada:
-//- Dos números enteros x,y en el rango [-128,127]
+//Output:
+//- Binary strings representing x and y in 8-bit 2's Complement format.
+//- Result of the binary sum between x and y in both 8-bit binary Complement to 2 and decimal format. The addition operations must be performed by directly manipulating the values in their binary version and with binary/logical operators.
+//- In case the sum overflows, the error must be reported. The validation of the overflow should also be performed using directly the values in their binary version and with binary/logical operators.
 
-//Salida:
-//- Cadenas binarias que representen x e y en formato Complemento a 2 de 8 bits.
-//- Resultado de la suma binaria entre x e y tanto en formato binario Complemento a 2 de 8 bits como en decimal. Las operaciones de la suma deben realizarse manipulando directamente los valores en su versión binaria y con operadores binarios/lógicos.
-//- En caso de que la suma se desborde deberán reportan el error. La validación del desbordamiento también deberá realizarse utilizando directamente los valores en su versión binaria y con operadores binarios/lógicos.
 
 #include <iostream>
 #include <conio.h>
@@ -115,7 +111,7 @@ int main()
 	cout << "X en Binario: ";
 	for(i=0; i<8; i++)
 	{
-		cout << cadenax[i]; //VALIDACIÓN DE QUE X ESTÁ EN BINARIO
+		cout << cadenax[i]; //VALIDACIÃ“N DE QUE X ESTÃ EN BINARIO
 	}
 	*/
 	
@@ -178,7 +174,7 @@ int main()
 	cout << "Y en Binario: ";
 	for(i=0; i<8; i++)
 	{
-		cout << cadenay[i]; //VALIDACIÓN DE QUE Y ESTÁ EN BINARIO
+		cout << cadenay[i]; //VALIDACIÃ“N DE QUE Y ESTÃ EN BINARIO
 	}
 	*/
 	
@@ -208,7 +204,7 @@ int main()
 		}
 	}
 	
-	// VALIDACIÓN DE INVERSIÓN DE BITS
+	// VALIDACIÃ“N DE INVERSIÃ“N DE BITS
 	cout << endl;
 	cout << "Complemento a2 de X: ";
 	for(i=0; i<8; i++)
@@ -238,7 +234,7 @@ int main()
 	}
 	reversion = false;
 
-	// VALIDACIÓN DE INVERSIÓN DE BITS
+	// VALIDACIÃ“N DE INVERSIÃ“N DE BITS
 	cout << endl;
 	cout << "Complemento a2 de Y: ";
 	for(i=0; i<8; i++)
