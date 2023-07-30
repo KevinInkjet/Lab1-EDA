@@ -8,7 +8,7 @@ This program is a command-line tool written in C++ that receives two integer inp
 - In the case of overflow during the addition operation, the program reports an error. The validation of overflow is also performed using bitwise operators.
 
 
-## Inatallation
+## Installation
 
 To run this program, you must have a C++ compiler installed on your system.
 
